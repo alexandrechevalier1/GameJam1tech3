@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ironman Win.unity
     guid: dc4ef4e27c5bf4e489eb5b58eab5b0f4
+  - enabled: 1
+    path: Assets/Scenes/Superman Win.unity
+    guid: 7cc26b2617b801e42b725a03a8f877c2
   m_configObjects: {}
