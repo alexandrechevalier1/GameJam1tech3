@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IronManMovemennt: MonoBehaviour
+public class IronManMovementManager : MonoBehaviour
 {
     public float moveSpeed;
     public float jumpForce;
@@ -22,17 +22,13 @@ public class IronManMovemennt: MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement;
 
-    public static IronManMovemennt instance;
-    private void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
-        if (instance != null)
-        {
-            Debug.LogWarning("Il y a plus d'une instance de PlayerMovement dans la scène");
-            return;
-        }
-        instance = this;
+        
     }
 
+    // Update is called once per frame
     void Update()
     {
         horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime;
@@ -48,7 +44,6 @@ public class IronManMovemennt: MonoBehaviour
         animator.SetBool("isGrounded", isGrounded);
         animator.SetFloat("VerticalSpeed", rb.velocity.y);
     }
-
     void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapArea(leftFoot.position, rightFoot.position, CollisionLayer);
