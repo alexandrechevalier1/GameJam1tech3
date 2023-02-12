@@ -58,7 +58,7 @@ public class health : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(2);
         }
     }
 }
