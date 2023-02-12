@@ -18,6 +18,7 @@ public class IronManAttack : MonoBehaviour
     private float damage;
 
     private bool Attack = false;
+    public bool isplayerone;
 
     public Animator attack;
     public AudioSource quickattacknoise;
@@ -35,28 +36,57 @@ public class IronManAttack : MonoBehaviour
         float waitTimeAfter = 0.0f;
         if (CoolDown <= 0)
         {
-            if (Input.GetKey(KeyCode.Mouse0))
+            if (isplayerone)
             {
-                Attack = true;
-                damage = QuickAttackDamage;
-                attack.SetBool("attackLight", true);
-                attack.SetBool("attackHeavy", false);
-            /*    quickattacknoise.Play();*/
-                waitTimeBefore = 0.05f;
-                waitTimeAfter = 0.2f;
-                CoolDownValue = StartCoolDownQuick;
+                if (Input.GetKey(KeyCode.O))
+                {
+                    Attack = true;
+                    damage = QuickAttackDamage;
+                    attack.SetBool("attackLight", true);
+                    attack.SetBool("attackHeavy", false);
+                    /*    quickattacknoise.Play();*/
+                    waitTimeBefore = 0.05f;
+                    waitTimeAfter = 0.2f;
+                    CoolDownValue = StartCoolDownQuick;
 
+                }
+                if (Input.GetKey(KeyCode.P))
+                {
+                    Attack = true;
+                    damage = HeavyAttackDamage;
+                    attack.SetBool("attackLight", false);
+                    attack.SetBool("attackHeavy", true);
+                    /*        heavyattacknoise.Play();*/
+                    waitTimeBefore = 0.35f;
+                    waitTimeAfter = 0.2f;
+                    CoolDownValue = StartCoolDownHeavy;
+                }
             }
-            if (Input.GetKey(KeyCode.Mouse1))
+            else
             {
-                Attack = true;
-                damage = HeavyAttackDamage;
-                attack.SetBool("attackLight", false);
-                attack.SetBool("attackHeavy", true);
-        /*        heavyattacknoise.Play();*/
-                waitTimeBefore = 0.35f;
-                waitTimeAfter = 0.2f;
-                CoolDownValue = StartCoolDownHeavy;
+                if (Input.GetKey(KeyCode.Mouse0))
+                {
+                    Attack = true;
+                    damage = QuickAttackDamage;
+                    attack.SetBool("attackLight", true);
+                    attack.SetBool("attackHeavy", false);
+                    /*    quickattacknoise.Play();*/
+                    waitTimeBefore = 0.05f;
+                    waitTimeAfter = 0.2f;
+                    CoolDownValue = StartCoolDownQuick;
+
+                }
+                if (Input.GetKey(KeyCode.Mouse1))
+                {
+                    Attack = true;
+                    damage = HeavyAttackDamage;
+                    attack.SetBool("attackLight", false);
+                    attack.SetBool("attackHeavy", true);
+                    /*        heavyattacknoise.Play();*/
+                    waitTimeBefore = 0.35f;
+                    waitTimeAfter = 0.2f;
+                    CoolDownValue = StartCoolDownHeavy;
+                }
             }
             if (Attack)
             {

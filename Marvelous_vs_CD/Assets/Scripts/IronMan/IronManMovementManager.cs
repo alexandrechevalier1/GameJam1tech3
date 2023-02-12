@@ -10,6 +10,7 @@ public class IronManMovementManager : MonoBehaviour
     private bool isJumping;
     public bool isGrounded;
 
+    public bool isplayerone;
     public Rigidbody2D rb;
     public Transform player;
     public SpriteRenderer spriteRenderer;
@@ -31,11 +32,43 @@ public class IronManMovementManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime;
-
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (isplayerone)
         {
-            isJumping = true;
+            if (Input.GetKey(KeyCode.Q) == true)
+            {
+                horizontalMovement = -1 * moveSpeed * Time.fixedDeltaTime;
+            }
+            if (Input.GetKey(KeyCode.D) == true)
+            {
+                horizontalMovement = 1 * moveSpeed * Time.fixedDeltaTime;
+            }
+            if (Input.GetKey(KeyCode.Q) == false && Input.GetKey(KeyCode.D) == false)
+            {
+                horizontalMovement = 0;
+            }
+            if (Input.GetButtonDown("Jump") && isGrounded)
+            {
+                isJumping = true;
+            }
+        }
+        else
+        {
+            if (Input.GetKey(KeyCode.LeftArrow) == true)
+            {
+                horizontalMovement = -1 * moveSpeed * Time.fixedDeltaTime;
+            }
+            if (Input.GetKey(KeyCode.RightArrow) == true)
+            {
+                horizontalMovement = 1 * moveSpeed * Time.fixedDeltaTime;
+            }
+            if (Input.GetKey(KeyCode.LeftArrow) == false && Input.GetKey(KeyCode.RightArrow) == false)
+            {
+                horizontalMovement = 0;
+            }
+            if (Input.GetKey(KeyCode.UpArrow) && isGrounded)
+            {
+                isJumping = true;
+            }
         }
 
         Flip(rb.velocity.x);
