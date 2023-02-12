@@ -39,9 +39,9 @@ public class IronManAttack : MonoBehaviour
             {
                 Attack = true;
                 damage = QuickAttackDamage;
-                attack.SetBool("isAttack", true);
-                attack.SetBool("isHeavy", false);
-                quickattacknoise.Play();
+                attack.SetBool("attackLight", true);
+                attack.SetBool("attackHeavy", false);
+            /*    quickattacknoise.Play();*/
                 waitTimeBefore = 0.05f;
                 waitTimeAfter = 0.2f;
                 CoolDownValue = StartCoolDownQuick;
@@ -51,12 +51,12 @@ public class IronManAttack : MonoBehaviour
             {
                 Attack = true;
                 damage = HeavyAttackDamage;
-                attack.SetBool("isAttack", true);
-                attack.SetBool("isHeavy", true);
-                heavyattacknoise.Play();
+                attack.SetBool("attackLight", false);
+                attack.SetBool("attackHeavy", true);
+        /*        heavyattacknoise.Play();*/
                 waitTimeBefore = 0.35f;
                 waitTimeAfter = 0.2f;
-                CoolDownValue = StartCoolDownHeavy; ;
+                CoolDownValue = StartCoolDownHeavy;
             }
             if (Attack)
             {
@@ -73,13 +73,16 @@ public class IronManAttack : MonoBehaviour
     IEnumerator AtkTime(Collider2D[] SwordHitBox, float wiatTimeBefore, float WaitTimeAfter)
     {
         yield return new WaitForSeconds(wiatTimeBefore);
-/*        for (int i = 0; i < SwordHitBox.Length; i++)
+        print("je suis a bout");
+        for (int i = 0; i < SwordHitBox.Length; i++)
         {
-            SwordHitBox[i].GetComponent<>().TakeDamage(damage);
-        }*/
+            print(i);
+            SwordHitBox[i].GetComponent<health>().TakeDamage(damage);
+            print("ça a exec ?");
+        }
         yield return new WaitForSeconds(WaitTimeAfter);
-        attack.SetBool("isAttack", false);
-        attack.SetBool("isHeavy", false);
+        attack.SetBool("attackLight", false);
+        attack.SetBool("attackHeavy", false);
         Attack = false;
     }
     private void OnDrawGizmosSelected()

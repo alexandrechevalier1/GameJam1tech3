@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,7 +103,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SuperManWalk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 67
+        height: 84
+      alignment: 9
+      pivot: {x: 0.6924575, y: 0.9159566}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09e6f49efa6de14d8ad193f901cba5a
+      internalID: 2049190760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuperManWalk_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 2
+        width: 51
+        height: 82
+      alignment: 9
+      pivot: {x: 0.8710987, y: 0.91849303}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7a9dfa6e8d9624386eaabf58277af8
+      internalID: 495380806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuperManWalk_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 67
+        height: 84
+      alignment: 9
+      pivot: {x: 0.67383265, y: 0.92338437}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ec0c94796a05f4d8925a7ef12eb451
+      internalID: 509578263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuperManWalk_3
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 0
+        width: 63
+        height: 84
+      alignment: 9
+      pivot: {x: 0.66506183, y: 0.92090845}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77954bd05d41cb4e894b95d53c206a6
+      internalID: -1956231168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuperManWalk_4
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 64
+        height: 84
+      alignment: 9
+      pivot: {x: 0.6819806, y: 0.92090845}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30cc7002ada7b54e8e89fcd1b0f536f
+      internalID: -107466807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuperManWalk_5
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 1
+        width: 59
+        height: 83
+      alignment: 9
+      pivot: {x: 0.80667996, y: 0.91846234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b012f0aadde86543ac3d4f612395aac
+      internalID: -1514556116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SuperManWalk_6
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 0
+        width: 73
+        height: 83
+      alignment: 9
+      pivot: {x: 0.7108267, y: 0.9259798}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d30675e2d5bec0408c318b53527eddb
+      internalID: 863099816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +261,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SuperManWalk_0: 2049190760
+      SuperManWalk_2: 509578263
+      SuperManWalk_5: -1514556116
+      SuperManWalk_3: -1956231168
+      SuperManWalk_1: 495380806
+      SuperManWalk_4: -107466807
+      SuperManWalk_6: 863099816
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
