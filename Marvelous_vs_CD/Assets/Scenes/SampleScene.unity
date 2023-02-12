@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 102443185}
   - component: {fileID: 102443184}
   - component: {fileID: 102443186}
+  - component: {fileID: 102443187}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -302,6 +303,30 @@ MonoBehaviour:
   CollisionLayer:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &102443187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102443180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3498d44019581745b804d3d6985a0a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartCoolDownQuick: 0.5
+  StartCoolDownHeavy: 0.5
+  attackPos: {fileID: 1054978505}
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 0
+  attackRange: 1
+  QuickAttackDamage: 25
+  HeavyAttackDamage: 50
+  attack: {fileID: 102443182}
+  quickattacknoise: {fileID: 0}
+  heavyattacknoise: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
