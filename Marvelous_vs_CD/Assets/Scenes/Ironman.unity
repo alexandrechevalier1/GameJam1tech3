@@ -295,7 +295,7 @@ MonoBehaviour:
   jumpForce: 300
   isGrounded: 0
   rb: {fileID: 102443185}
-  player: {fileID: 1856441855}
+  player: {fileID: 102443181}
   spriteRenderer: {fileID: 102443183}
   animator: {fileID: 102443182}
   leftFoot: {fileID: 1772119467}

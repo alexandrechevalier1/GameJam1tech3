@@ -87,5 +87,4 @@ public class IronManAttack : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
-    }
 }
